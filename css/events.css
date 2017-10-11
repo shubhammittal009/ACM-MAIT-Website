@@ -1,0 +1,297 @@
+/* NAVBAR STYLE START*/
+.nb-nav-bg{
+    background-color: rgba(3,4,4,0.7);
+}
+
+.nav-item{
+    margin-right: 10px;
+    position: relative;
+}
+
+.nav-link:hover{
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link{
+    width: auto;
+}
+.nav-link::before{
+    content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #19f6e8;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover::before{
+    visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nb-link-style-text{
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.wrapper-menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);  
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 3px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+.navbar-toggler:focus{
+    outline: 0;
+}
+.nav-link:focus{
+    outline: 0px;
+}
+
+/* NAVBAR STYLE END */
+
+/*CONTACT MODAL STYLE START*/
+.close:focus{
+    outline: 0px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+/*CONTACT MODAL STYLE END*/
+
+/*BODY STYLING START*/
+body{
+    background-color: #0A0B11;
+}
+
+.container-fluid{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    margin: auto;
+    text-align: center;
+    z-index: 10;
+}
+
+h1{
+    color: #44AAFF;
+    font-family: Oswald;
+    font-weight: 600;
+    margin: auto;
+    font-size: 10em;
+    display:block;
+    margin: auto;
+}
+
+.arrow{
+  cursor: pointer;
+  position:relative;
+    left: calc(50% - 40px);
+  margin-left: 0px;
+  display:block;
+  margin-top: 40px;
+  width:80px;
+  height: 80px;
+  border: solid 6px white;
+  border-radius: 100%;
+  z-index: 1;
+  transition: all .2s linear;}
+
+  .arrow:before, .arrow:after{
+    content:"";
+    position: absolute;
+    width:35%;
+    height: 10%;
+    top:41%;
+    left:55%;
+    background: white;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all .2s linear;
+  }
+  .arrow:after{
+    z-index: 3;
+    top:59%;
+    left:55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .arrow:hover{
+    border: solid 8px white;
+    background-color: white;
+    
+  }
+.arrow:hover:after, .arrow:hover:before{
+      background: #44aaff;
+    }
+
+
+/*TYPING STYLING START*/
+.var-highlight {
+  color: #46ffff;
+}
+
+.function-highlight{
+    color: #c600ff;
+}
+
+.string-highlight {
+  color: rgba(253, 149, 90, 0.8);
+}
+
+#typewriter, #typewriter2 {
+  font-size: 1em;
+  margin: 0;
+  font-family: "Courier New";
+    position: absolute;
+    color:white;
+    opacity: 0.7;
+}
+
+#typewriter{
+     top: 10vmin;
+    left: -10vmin;
+}
+#typewriter:after, #typewriter2:after {
+  content: "|";
+  -webkit-animation: blink 500ms linear infinite alternate;
+          animation: blink 500ms linear infinite alternate;
+}
+
+#typewriter2{
+
+    bottom: 0vmin;
+    right: 10vmin;
+}
+
+
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*TYPING STYLING END*/
+@media screen and (max-height: 500px) {
+    #typewriter,#typewriter2{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 5em;
+    }
+    .arrow{
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: calc(50% - 30px);
+    }
+    #typewriter,#typewriter2{
+        font-size: 0.7em;
+    }
+    #typewriter{
+        top: 18vmin;
+        left: -13vmin;
+    }
+    #typewriter2{
+        right: 5vmin;
+    }
+    
+    .arrow{
+        margin-top: 20px;
+    }
+}
+/* sm */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    h1 {
+        font-size: 8em;  
+    }   
+     #typewriter,#typewriter2{
+        font-size: 0.7em;
+    }
+    #typewriter2{
+        right: 5vmin;
+    }
+}
+/* md */
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+    h1 {
+        font-size: 10em;
+    }
+     #typewriter,#typewriter2{
+        font-size: 0.8em;
+    }
+    #typewriter2{
+        right: 5vmin;
+    }
+    
+}
+/* lg */
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 10em;
+    }
+}
+
+/*BODY STYLING END*/
