@@ -4,11 +4,23 @@
 }
 
 body{
+    
 	background-image: url("../img/bg_gallery.jpg");
+    max-width: 1920px;
 	/*line-height: 1.6em;*/
 	/*background-repeat: repeat;*/
 }
-
+img#mybg {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    max-width: 1920px; 
+    max-height: 1080px;
+    z-index: -999999; 
+}
 /* Swiper Slider */
 .container-fluid ,.wider {
         font-size: 14px;
@@ -21,13 +33,14 @@ body{
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
+
     .swiper-slide {
         background-position: center;
         background-size: cover;
         width: 375px;
         height: 375px; 
 	}
-
 
 
 .container-fluid{
@@ -47,12 +60,13 @@ h1{
     font-size: 8em;
     display:block;
     margin: auto;
+    position: relative;
 }
 
 .arrow{
 	font-family: 'Oswald','Roboto';
   	cursor: pointer;
- 	position:relative;
+ 	
   	display:inline-block;
  	margin-top: 40px;
   	padding: 10px 20px;
@@ -65,7 +79,7 @@ h1{
 }
 
 .arrow:hover{
-    border: solid 8px white;
+    border: solid 3px white;
     background-color: white;
     color: #1d6ae5;    
   }
@@ -90,7 +104,7 @@ h1{
 .wider h1 {
 	font-family: 'Oswald','Roboto';
 	color:#44AAFF;
-	font-size: 7em;
+	font-size: 6em;
 }
 
 .hideIt {
@@ -98,7 +112,7 @@ h1{
 }
 
 
-@media screen and (max-width: 1000px) and (min-width: 820px) {
+/*@media screen and (max-width: 1000px) and (min-width: 820px) {
 	.swiper-slide {
 		width: 400px;
 		height: 300px;
@@ -124,6 +138,73 @@ h1{
 	}
 
 }
+*/
+
+@media screen and (max-height: 500px) {
+    body{
+        background-image: url("../img/bg-home-1280.jpg");
+    }
+    
+    .wider h1{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 5em;
+    }
+    .arrow{
+        width: auto;
+        height: 60px;
+        
+    }
+    .arrow{
+        margin-top: 20px;
+    }
+    
+    .wider h1{
+        font-size: 4em;
+    }
+    body{
+        background-image: url("../img/bg-home-1280.jpg");
+    }
+    
+    
+    
+}
+/* sm */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    h1 {
+        font-size: 8em;  
+    }   
+    
+    body{
+        background-image: url("../img/bg-home-1280.jpg");
+    }
+    
+    
+}
+/* md */
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+    h1 {
+        font-size: 10em;
+    }
+    body{
+        background-image: url("../img/bg-home-1280.jpg");
+    }
+    
+    
+}
+/* lg */
+@media screen and (min-width: 1200px){
+    h1{
+        font-size: 10em;
+    }
+    
+}
+
 
 
 /* NAVBAR STYLE START*/
