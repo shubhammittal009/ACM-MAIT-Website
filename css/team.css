@@ -8,18 +8,16 @@
     margin-top: 100px;
     text-align: center;
     color: #44AAFF;
-    font-family: "Merriweather",sans-serif;
-    font-style: italic;
-    font-weight: 700px;
+    font-family: "Oswald",sans-serif;
+    font-weight: 700;
     font-size: 3em;
 }
 
 h3 {
     margin-top: 15px;
     text-align: center;
-    color: #3577e0;
-    font-family: "Merriweather",sans-serif;
-    font-style: italic; 
+    color: white;
+    font-family: "Roboto",sans-serif;
 }
 
 p {
