@@ -61,6 +61,11 @@
       overflow: hidden
     }
 
+    .slidesjs-container{
+      overflow-y: auto !important;
+
+    }
+
 
   
 /*CUSTOM STYLING START*/
@@ -120,6 +125,14 @@ p{
      
       .container{
         width: auto
+      }
+
+      .register{
+        margin-bottom: 30px;
+      }
+
+      .slidesjs-slide img{
+        visibility: hidden;
       }
     }
 
