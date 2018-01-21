@@ -118,6 +118,7 @@ p{
 .event-image{
     float:right;
     max-width: 40%;
+    resize: 150%;
 }
 /*CUSTOM STYLING END*/
 
