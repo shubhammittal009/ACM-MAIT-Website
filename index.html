@@ -7,7 +7,6 @@
     <title>ACM MAIT</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     
@@ -79,12 +78,22 @@
                 <div class="modal-content">
                     <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">CONTACT US</h5>
+                    
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
-                         
+                     <form method="post" action="contact.php" target="iframe">
+                       <div class="form-group">
+                       <input type="text" name="name" placeholder="Name*" required="" class="form-control"></div>
+                       <div class="form-group">
+                       <input type="email" name="email" placeholder="Email*" required="" class="form-control"></div>
+                       <div class="form-group">
+                       <textarea name="message" placeholder="Message*" required="" class="form-control" rows="4"></textarea></div>
+                       <input type="submit" name="submit" value="Submit" class="button3">
+                     </form>
+                     <iframe name="iframe" style="border:0 solid white;height: 5px;"></iframe>    
                     </div>
                 </div>
             </div>

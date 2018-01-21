@@ -15,6 +15,42 @@
     <link rel="icon" href="favicon.ico">
   </head>
   <body>
+    <style type="text/css">
+      
+.button3 {
+   border-top: 1px solid #6198ba;
+   background: #4696cc;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#4696cc));
+   background: -webkit-linear-gradient(top, #3e779d, #4696cc);
+   background: -moz-linear-gradient(top, #3e779d, #4696cc);
+   background: -ms-linear-gradient(top, #3e779d, #4696cc);
+   background: -o-linear-gradient(top, #3e779d, #4696cc);
+   padding: 7px 12px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 15px;
+   font-family: Arial, sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   cursor: pointer;
+   }
+.button3:hover {
+   border-top-color: #2072a1;
+   background: #2072a1;
+   color: #ccc;
+   }
+.button3:active {
+   border-top-color: #1b567d;
+   background: #1b567d;
+   }
+
+    </style>
 
    <!-- NAV BAR -->
 <nav class="navbar navbar-expand-lg nb-nav-bg fixed-top ">
@@ -64,7 +100,16 @@
                     </button>
                     </div>
                     <div class="modal-body">
-
+                      <form method="post" action="contact.php" target="iframe">
+                        <div class="form-group">
+                        <input type="text" name="name" placeholder="Name*" required="" class="form-control"></div>
+                        <div class="form-group">
+                        <input type="email" name="email" placeholder="Email*" required="" class="form-control"></div>
+                        <div class="form-group">
+                        <textarea name="message" placeholder="Message*" required="" class="form-control" rows="4"></textarea></div>
+                        <input type="submit" name="submit" value="Submit" class="button3">
+                      </form> 
+                      <iframe name="iframe" style="border:0 solid white;height: 5px;"></iframe>  
                     </div>
                 </div>
             </div>
