@@ -1,2 +1,2 @@
 # ACM-MAIT-Website
-mait.acm.org
+https://mait.acm.org
